@@ -188,7 +188,7 @@ for (const datum of data) {
 <!-- .element: data-transition="zoom" data-background="assets/20170709-nodeschool-osaka-36/bg-babel.png" data-background-position="top center" -->
 
 ## あった。
-Babel: [babeljs.io](https://babeljs.io/)
+Babel - https://babeljs.io/
 * ES6をES5に変換するツール（トランスパイラ）
 * 由来は旧約聖書に出てくる「バベルの塔」
 * プラグイン機能
