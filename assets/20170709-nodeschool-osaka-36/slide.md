@@ -42,7 +42,7 @@
 
 もっと使いやすくならんかな…
 
-もうJSなんて進化しないよな…
+もうJavaScriptなんて進化しないよな…
 
 ------
 <!-- .element: data-transition="zoom" -->
@@ -50,7 +50,7 @@
 ## してた。
 ECMAScript
 * JavaScriptの規格
-* ほとんどのブラウザはECMAScript5(ES5)対応
+* 現行の「いわゆるJavaScript」はECMAScript5(ES5)
 * ECMAScript6(ES6)ではもっと便利に！
 * 他のAltJS(TypeScript, CoffeeScript, ...)と一線を画す
     * JavaScriptある限りECMAScriptは不滅
@@ -72,14 +72,15 @@ ECMAScript
 
 ## ES5 vs ES6（モジュール）
 ```javascript
+// ES5
 // ただの関数呼び出し？
 var foo = require("foo");
 
 // ただの代入？
 module.exports = bar;
 ```
-<div style="text-align: center;">↓</div>
 ```javascript
+// ES6
 // インポートだ！
 import foo from "foo";
 
@@ -91,6 +92,7 @@ export default bar;
 
 ## ES5 vs ES6（クラス定義）
 ```javascript
+// ES5
 // クラスに見えない
 function aClass() {
     // コンストラクタ
@@ -99,8 +101,8 @@ aClass.prototype.aMethod = function() {
     // aClassのメソッド
 }
 ```
-<div style="text-align: center;">↓</div>
 ```javascript
+// ES6
 // クラスだ！
 class aClass {
     constructor() {
@@ -116,35 +118,43 @@ class aClass {
 
 ## ES5 vs ES6（変数・定数）
 ```javascript
-{
+// ES5
+var variant = 0;
+function foo() {
     console.log(variant); // undefined（変数巻き上げ）
-    var CONSTANT = 1; // 変えるなよ！絶対変えるなよ！
-    var variant = 1;
+    {
+        var CONSTANT = 1; // 変えるなよ！絶対変えるなよ！
+        var variant = 1;
+    }
+    console.log(CONSTANT); // ここでもアクセスできる
 }
-console.log(CONSTANT + variant); // ここでもアクセスできる
 ```
-<div style="text-align: center;">↓</div>
 ```javascript
-{
-    console.log(variant); // 未定義エラー！
-    const CONSTANT = 1; // 変更するとエラー！
-    let variant = 1;
+// ES6
+let variant = 0;
+function foo() {
+    console.log(variant); // 0
+    {
+        const CONSTANT = 1; // 変えるとエラー！
+        let variant = 1;
+    }
+    console.log(CONSTANT); // エラー！
 }
-console.log(CONSTANT + variant); // エラー！
 ```
 
 ---
 
 ## ES5 vs ES6（配列のループ）
 ```javascript
+// ES5
 var data = [1, 2, 3];
 for (var i = 0; i < data.length; i++) {
     var datum = data[i];
     console.log(datum * datum);
 }
 ```
-<div style="text-align: center;">↓</div>
 ```javascript
+// ES6
 const data = [1, 2, 3];
 for (const datum of data) {
     console.log(datum * datum);
@@ -156,7 +166,7 @@ for (const datum of data) {
 ## ES6対応状況（Node.js）
 * 最新LTS(バージョン6)ではあらかた対応
 * バージョンによっては、 `"use strict"` を指定しないと使えない機能がある
-* サーバサイドJSは古いバージョンを使わざるを得ない場合がある
+* サーバサイドでは古いバージョンを使わざるを得ない場合がある
     * Ubuntu 16.04ではバージョン4をサポート
 
 ------
@@ -230,7 +240,7 @@ Babel - https://babeljs.io/
     * Chromeの最新から2バージョン前
     * IEのシェア1%以上のバージョン
 * presetはこれさえ覚えておけばOK！
-    * 正式採用されていない実験的な機能は別途プラグインが必要な場合あり
+    * 実験的な文法は別途プラグインが必要な場合あり
 
 ------
 <!-- .element: data-background="assets/20170709-nodeschool-osaka-36/bg-babel-preset-env-sample.png" data-background-position="top center" -->
@@ -243,21 +253,21 @@ Babel - https://babeljs.io/
 ------
 
 ## 注意
-* 新しい文法はそのままでは使えないことがある
-    * 特定プラグインの有効化・無効化が必要な場合も
-    * ジェネレータ
-    * `async` / `await`
-    * `static` プロパティ
-* ブラウザ用にトランスパイルする場合、ランタイムライブラリをWebpack等でまとめる必要あり
+* 新しい文法はそのままでは使えない場合あり
+    * 特定プラグインの有効化・無効化が必要
+    * `async` / `await`, `static` プロパティ等
+* 新しいクラスやメソッドはpolyfillが必要な場合あり
+* ランタイムライブラリが必要な場合あり
+    * ブラウザ向けには[webpack](https://webpack.github.io/)等で1ファイルにまとめるのが一般的
 
 ------
 
 ## ES6の拡張子は？
-* 個人的には `.js` は使いたくない
+* `.js` - 個人的には使いたくない
     * ブラウザに食わせていいものだけ `.js` にしたい
-* ECMAScriptの正式な拡張子は `.es`
+* `.es` - ECMAScriptの正式な拡張子
     * あまり浸透していない
-* `.es6` のほうがまだ浸透している
+* `.es6` - 正式ではないけど割と浸透している
     * バージョン6限定っぽく見える
 
 結論: 好きなの使え
