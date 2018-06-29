@@ -1,5 +1,6 @@
 ## 2018年
 
+* [CJSとESMとnpmパッケージ](20180629-tng-31.html) in [Node学園 31時限目](https://nodejs.connpass.com/event/90936/)
 * [BigInt あれこれ](20180427-tng-30.html) in [Node学園 30時限目](https://nodejs.connpass.com/event/83639/)
 * [dynamic import あれこれ](20180222-nodeschool-29.html) in [Node学園 29時限目](https://nodejs.connpass.com/event/78902/)
 
