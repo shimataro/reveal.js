@@ -208,10 +208,8 @@ import foo from "./path/to/foo.mjs"; // OK
 
 package.jsonの設定で挙動を変える
 
-* `module`
-  * `.js`はES Modules形式とみなす
-* `commonjs` （デフォルト）
-  * `.js`はCommonJS形式とみなす（従来同様）
+* `module`: ES Modules形式とみなす
+* `commonjs`: CommonJS形式とみなす （従来挙動＆デフォルト）
 
 ---
 
@@ -235,10 +233,10 @@ package.jsonの設定で挙動を変える
 
 コマンドラインオプションで挙動を変える
 
-* `node`
-  * 拡張子や`index.js`は省略可（従来同様）
-* `explicit` （デフォルト）
-  * 拡張子が必須
+* `node`: 拡張子や`index.js`は省略可（従来挙動）
+* `explicit`: 拡張子が必須（デフォルト）
+
+※全ファイルに適用される（パッケージ単位の指定は不可）
 
 ------
 
