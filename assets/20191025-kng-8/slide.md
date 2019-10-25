@@ -234,18 +234,6 @@ package.jsonの設定で挙動を変える
 
 ### 現状との互換性も確保したい(2)
 
-どのpackage.jsonの設定を使う？
-
-> For any file that Node.js tries to load, it will look for a package.json in that **file’s folder, then that file’s parent folder and so on upwards** until it reaches the root of the volume.
-
-**親ディレクトリを辿り**、最初に見つかったものを使う
-
-＝ファイルが属しているパッケージの設定ファイル
-
----
-
-### 現状との互換性も確保したい(3)
-
 いきなり拡張子を必須にされると困る
 
 > However, the CommonJS-style automatic extension resolution behavior (‘./file’) can be enabled via a new flag, **--es-module-specifier-resolution=node**.
