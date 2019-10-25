@@ -44,7 +44,7 @@
 ↓スライドはこちら↓
 
 * <https://speakerdeck.com/shimataro>
-* <https://shimataro.github.io/slides/>
+* <https://shimataro.me/slides/>
 
 ------
 
