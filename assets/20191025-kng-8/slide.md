@@ -52,6 +52,7 @@
 * きっかけ
 * CommonJS
 * ES Modules
+* 相互運用
 * v12での変更点
 * 対応方法
 * まとめ
@@ -144,6 +145,23 @@ export default () => {
 // "C"というURIスキームが見つからない
 import foo from "C:/path/to/foo";
 ```
+
+------
+
+## 相互運用
+
+* `module.exports`したものを`import`する場合
+* `export`したものを`require()`する場合
+
+---
+
+### 相互運用
+
+できんことないけどやめたほうがいい
+
+![Issue](./assets/20191025-kng-8/cjs-esm.svg)
+
+<small>[Native ES Modules - something almost, but not quite entirely unlike CommonJS by Gil Tayor](https://docs.google.com/presentation/d/1JKnj-HvAwkba9GMEuEqZjMPzAaZTL7j2f1n4JjOWXhs/mobilepresent#slide=id.p)</small>
 
 ------
 
