@@ -1,3 +1,7 @@
+## 2019年
+
+* [Node.js v12のES Modules](20191025-kng-8.html) in [関西Node学園 8時限目](https://nodejs.connpass.com/event/147459/)
+
 ## 2018年
 
 * [おまいらちゃんとリソース解放してますか](20181123-nodefest-2018.html) in [東京Node学園祭2018](http://nodefest.jp/2018/)
