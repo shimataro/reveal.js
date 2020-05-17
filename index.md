@@ -1,3 +1,7 @@
+## 2020年
+
+* [NPMパッケージをDeno対応してみた](20200517-deno-study-9.html) in [Deno勉強会 9]()
+
 ## 2019年
 
 * [Node.js v12のES Modules](20191025-kng-8.html) in [関西Node学園 8時限目](https://nodejs.connpass.com/event/147459/)
