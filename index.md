@@ -1,6 +1,7 @@
 ## 2020年
 
-* [NPMパッケージをDeno対応してみた](20200517-deno-study-9.html) in [Deno勉強会 9]()
+* [いまさら聞けないNode.js](https://docs.google.com/presentation/d/1ts1EdkDfCgxZ6PKHOKTbqyQT-PgR4xJpRgQe_rrcSyk) in [さくらの夕べ Tech Night #2 Online](https://sakura-tokyo.connpass.com/event/182387/)
+* [NPMパッケージをDeno対応してみた](20200517-deno-study-9.html) in Deno勉強会 9
 
 ## 2019年
 
